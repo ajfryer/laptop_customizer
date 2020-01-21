@@ -6,7 +6,7 @@ import PageMain from './Components/PageMain/PageMain';
 /*
 The App class Component is the root component.
 Maintains state for all other functional components.
-Returns a header along with a FeaturesForm and Summary Component.
+Returns a PageHeader and PageMain Component.
 */
 class App extends Component {
   state = {
