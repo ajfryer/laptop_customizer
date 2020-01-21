@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import FeaturesForm from './Components/FeaturesForm/FeaturesForm';
-import Summary from './Components/Summary/Summary'; 
 import './App.css';
+import PageHeader from './Components/PageHeader/PageHeader';
+import PageMain from './Components/PageMain/PageMain';
 
 /*
 The App class Component is the root component.
@@ -39,17 +39,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing | Laptops</h1>
-        </header>
-        <main>
-          <FeaturesForm
-            features={this.props.features}
-            updateFeature={this.updateFeature}
-            selected={this.state.selected}
-          />
-          <Summary selected={this.state.selected} />
-        </main>
+        <PageHeader />
+        <PageMain
+          features={this.props.features}
+          updateFeature={this.updateFeature}
+          selected={this.state.selected}
+        />
       </div>
     );
   }

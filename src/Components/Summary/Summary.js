@@ -1,11 +1,11 @@
 import React from 'react';
 import SummaryOption from '../SummaryOption/SummaryOption';
-import USCurrencyFormat from '../../USCurrencyFormat';
+import SummaryTotal from '../SummaryTotal/SummaryTotal';
 import './Summary.css';
 
 /*
-The Summary Component returns the set of individual SummaryOption Components
-and displays a total summary price based on the App Component state
+The Summary Component returns several SummaryOption Components
+and a SummaryTotal Component
 */
 const Summary = (props) => {
   return (
@@ -19,17 +19,7 @@ const Summary = (props) => {
           optionCost={props.selected[feature].cost}
         />
       ))}
-      <div className="summary__total">
-        <div className="summary__total__label">Total</div>
-        <div className="summary__total__value">
-          {USCurrencyFormat.format(
-            Object.keys(props.selected).reduce(
-              (acc, curr) => acc + props.selected[curr].cost,
-              0
-            )
-          )}
-        </div>
-      </div>
+      <SummaryTotal selected={props.selected} />
     </section>
   );
 };

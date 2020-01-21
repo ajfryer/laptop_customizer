@@ -13,3 +13,7 @@
   line-height: inherit;
   font-weight: bold;
 }
+
+legend > h3 {
+  margin: 0;
+}
