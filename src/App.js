@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-
-
-import './App.css';
-
 import FeaturesForm from './Components/FeaturesForm/FeaturesForm';
 import Summary from './Components/Summary/Summary'; 
+import './App.css';
 
+/*
+The App class Component is the root component.
+Maintains state for all other functional components.
+Returns a header along with a FeaturesForm and Summary Component.
+*/
 class App extends Component {
   state = {
     selected: {
